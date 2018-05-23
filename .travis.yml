@@ -1,11 +1,15 @@
 sudo: required
+dist: trusty
+
 services:
 - docker
+
 script:
 - docker info
 - echo "$DOCKER_PASSWORD" | docker login quay.io -u "$DOCKER_USERNAME" --password-stdin
 - docker build -t quay.io/woditschka/openjdk:8 .
 - docker push quay.io/woditschka/openjdk:8
+
 env:
   global:
   - secure: acmOiL1dKUsO+M7hu7RBva1AyVG3RPNi2MH/m40CumiUnYpXVpV0GJsrHIzAEYw42Jx18O7+RdEqSOZ45gw+E96B6ziMMLLAiSWchzs7nDg8DrqhomAuMuDVKUsESX+E3QIyYQDYGVBcmrQIYNgYkQKjdKax9mUf2Fgys7q1d0izFrUObTuMzl+k4aW9igI+cNEz3YeZOcP5QNn9q9vLtZEnqRzrlP0QPEz63KLylrUS/qMsO3rWtUyOOeoDwzwC2mUACbfvRF9gUNnrHr9ERHhfo60CT1x61XQBQY5Xg1lvpnKfR0Qm+Y1HY/gaq6ysGe04LQZ9HkH5eVSAIin1JX++7WQ9cnj8AN+b2+GIkyVKTXmQ51B/pQ2//R40o5hBMVEzGd2DkCaAL93goCSino0K/24kkyLOkHoi7ycv7qk5V7KwfyplloEbomLdiyPOvfy+L5KXuToqv2UcmLoniuEehTYg5IoVVFqg0PgReGxYQwxEbFF5XfqqnXezP0W9u+NImaHDiyen9dMzAM4/b0n0pRgg+fQyk910erk6YHbF/QHtJOMd+qqT2/r5clH4CvBOVGzjE3kcAY1SPjG21NcIJEtRy/3HwZAryjukCy7Jsb4dq0L5/1oozTuevCFNcMgjBpUe/J5OcHU8/5iM1KST3iPZSb3Kk7rUdFzxAvA=

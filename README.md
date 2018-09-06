@@ -17,7 +17,7 @@ docker run -it quay.io/woditschka/openjdk:10
 ## OpenJDK 11
 
 ```
-docker run -it quay.io/woditschka/openjdk:11
+docker run -it quay.io/woditschka/openjdk:11-ea
 ```
 
 [![Build Status](https://travis-ci.org/woditschka-os/docker-openjdk.svg?branch=master)](https://travis-ci.org/woditschka-os/docker-openjdk)

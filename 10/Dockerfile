@@ -12,7 +12,7 @@ RUN yum update -y && \
     rm -rf /var/cache/yum && \
     mkdir -p /usr/lib/jvm && \
     cd /usr/lib/jvm && \
-    wget ${OPENJDK_URL} && \
+    curl ${OPENJDK_URL} --output ${OPENJDK_TGZ} && \
     tar -xzf ${OPENJDK_TGZ} && \
     rm -f ${OPENJDK_TGZ} && \
     ln -s jdk-${OPENJDK_VERSION} java && \

@@ -17,7 +17,7 @@ script:
 - cd ..
 - cd 11
 - docker build -t quay.io/woditschka/openjdk:11 .
-- docker push quay.io/woditschka/openjdk:11-ea
+- docker push quay.io/woditschka/openjdk:11
 - cd ..
 - cd 12
 - docker build -t quay.io/woditschka/openjdk:12-ea .

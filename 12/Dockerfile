@@ -1,9 +1,8 @@
 FROM quay.io/woditschka/centos:7
 
-ARG OPENJDK_VERSION=12
-ARG OPENJDK_BUILD=18
-ARG OPENJDK_TGZ=openjdk-${OPENJDK_VERSION}-ea+${OPENJDK_BUILD}_linux-x64_bin.tar.gz
-ARG OPENJDK_URL=https://download.java.net/java/early_access/jdk${OPENJDK_VERSION}/${OPENJDK_BUILD}/GPL/${OPENJDK_TGZ}
+ARG OPENJDK_VERSION=12.0.1
+ARG OPENJDK_TGZ=openjdk-${OPENJDK_VERSION}_linux-x64_bin.tar.gz
+ARG OPENJDK_URL=https://download.java.net/java/GA/jdk${OPENJDK_VERSION}/69cfe15208a647278a19ef0990eea691/12/GPL/${OPENJDK_TGZ}
 
 ENV JAVA_HOME /usr/lib/jvm/java
 
